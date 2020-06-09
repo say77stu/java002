@@ -9,9 +9,14 @@ public class CyclesGoldenFibo {
 
            for(int i=1;i<=number;i++){
             digit1=number%10;
+            int number1 = number;
             if(digit==digit1) {
                 result=true;break;}
-                else result=false;
+                else {if(number1>0&&number1<=10&&digit==digit1) {result=true; return result;} else { //груз
+                number = number/10;
+                result = false;
+            }
+            }
         }
         return result;
     }
