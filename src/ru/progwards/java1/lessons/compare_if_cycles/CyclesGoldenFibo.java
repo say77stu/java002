@@ -15,7 +15,7 @@ public class CyclesGoldenFibo<number> {
                 if (digit != digit1)
 
                    {
-                    System.out.println("ЦИФРА " + digit1 + " НЕ ВХОДИТ в ЧИСЛО " + number2);
+                    System.out.println("ЦИФРА " + digit1 + " НЕ СОВПАДАЕТ С DIGIT = " + digit + " ЧИСЛA " + number2);
                     result = false;
                    } else {
 

@@ -48,7 +48,7 @@ public class TriangleSimpleInfo {
         System.out.println("Треугольник является прямоугольным ? " + isRightTriangle(6,10,8));
         System.out.println("Треугольник является равнобедренным ? " + isIsoscelesTriangle(7,7,6));
 
-        System.out.println("Возвращать TRUE, если число number содержит цифру digit " + containsDigit(781803,6));
+        System.out.println("Возвращать TRUE, если число number содержит цифру digit " + containsDigit(10801843,0));
 
     }
 
