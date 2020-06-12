@@ -4,6 +4,8 @@ import static ru.progwards.java1.lessons.compare_if_cycles.TriangleInfo.isTriang
 import static ru.progwards.java1.lessons.compare_if_cycles.TriangleInfo.isRightTriangle;
 import static ru.progwards.java1.lessons.compare_if_cycles.TriangleInfo.isIsoscelesTriangle;
 import static ru.progwards.java1.lessons.compare_if_cycles.CyclesGoldenFibo.containsDigit;
+import static ru.progwards.java1.lessons.compare_if_cycles.CyclesGoldenFibo.fiboNumber;
+import static ru.progwards.java1.lessons.compare_if_cycles.CyclesGoldenFibo.isGoldenTriangle;
 
 public class TriangleSimpleInfo {
     public static int maxSide(int a, int b, int c) //Фунция должна вернуть наибольшую длину стороны
@@ -49,7 +51,15 @@ public class TriangleSimpleInfo {
         System.out.println("Треугольник является равнобедренным ? " + isIsoscelesTriangle(7,7,6));
 
         System.out.println("Возвращать TRUE, если число number содержит цифру digit " + containsDigit(10801843,0));
+        System.out.println("Числа Фибоначчи это ряд чисел 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 - первые два элемента равны 1, а каждый следующий равен сумме двух предыдущих " + fiboNumber(15));
 
-    }
+        System.out.println("Числа Фибоначчи от 1 до 15");
+        for (int i = 0; i <= 15; i++)
+        { System.out.println("I= " + i + " Число Фибоначчи = "+ fiboNumber(15));
+        }
+            System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(5,4,5));
+        } ;
+        //
+    //}
 
 }
