@@ -55,7 +55,7 @@ public class TriangleSimpleInfo {
 
         System.out.println("Числа Фибоначчи от 1 до 15");
         for (int i = 0; i <= 15; i++)
-        { System.out.println("I= " + i + " Число Фибоначчи = "+ fiboNumber(15));
+        { System.out.println("I= " + i + " Число Фибоначчи = "+ fiboNumber(i));
         }
             System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(5,4,5));
         } ;
