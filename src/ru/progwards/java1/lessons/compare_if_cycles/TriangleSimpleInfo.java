@@ -43,11 +43,11 @@ public class TriangleSimpleInfo {
         //Фунция должна вернуть true, если треугольник равносторонний и false в противном случае
         public static boolean isEquilateralTriangle(int a, int b, int c) {
         boolean ResultOfCompare; //результат сравнения длин сторон
-        if (minSide(a,b,c) == maxSide(a,b,c)){     //вариант (a == b && b == c && c == a)
-            ResultOfCompare=true;
-        } else{
-            return ResultOfCompare=false;
-
+        if (minSide(a,b,c) == maxSide(a,b,c)) {    //вариант (a == b && b == c && c == a)
+            ResultOfCompare = true;
+        }
+       else {
+            ResultOfCompare = true;
         }
             return ResultOfCompare;
     }
@@ -56,7 +56,7 @@ public class TriangleSimpleInfo {
     public static void main (String[] args) {
         System.out.println("max = " + maxSide(25, 25, 19));
         System.out.println("min = " + minSide(25, 24, 26));
-        System.out.println("Tреугольник является равносторонним ? " + isEquilateralTriangle(10, 10, 10));
+        System.out.println("Tреугольник является равносторонним ? " + isEquilateralTriangle(8,8,8));
 
         System.out.println("По данным трём сторонам (a, b, c) можно построить треугольник ? " + isTriangle(31, 21, 51));
         System.out.println("Треугольник является прямоугольным ? " + isRightTriangle(6,10,8));
@@ -80,5 +80,3 @@ public class TriangleSimpleInfo {
 
 }
 
-    private static String isEquilateralTriangle(int i, int i1, int i2) {
-    }
