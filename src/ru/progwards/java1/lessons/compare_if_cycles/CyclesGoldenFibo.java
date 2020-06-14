@@ -55,15 +55,17 @@ public class CyclesGoldenFibo<number> {
     public static boolean isGoldenTriangle(int a, int b, int c) {
         double minValue = 1.61703;
         double maxValue = 1.61903;
+        //compareOfSide - переменная, в которой будет результат отношения большей к меньшей стороне треугольника
         double compareOfSide = 100000e-5;
+
         compareOfSide = maxSide(a, b, c) / minSide(a, b, c);//Double.valueOf(maxSide(a, b, c) / minSide(a, b, c));
-        double bc = b / c;
-        double ac = a / c;
+   //     double bc = b / c;
+    //    double ac = a / c;
      //   if (isIsoscelesTriangle(a, b, c) == true) {
-       //     if ((compareOfSide > minValue && compareOfSide < maxValue)) {
+            if ((compareOfSide > minValue && compareOfSide < maxValue)) {
                 System.out.println("a = " + maxSide(a, b, c) + " Результат1 b = "+minSide(a, b, c) +" ++ " + compareOfSide +" ++ "+ minValue + " ++ "+ maxValue);
-            //    return true;
-         //   }
+                return true;
+            }
 
        // }
         return false;
