@@ -72,7 +72,7 @@ public class TriangleSimpleInfo {
 
         }
 
-        System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(13,8,13));
+        System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(8,8,13));
     //if ()
     } ;
         //
