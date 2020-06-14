@@ -53,21 +53,29 @@ public class CyclesGoldenFibo<number> {
     }
 
     public static boolean isGoldenTriangle(int a, int b, int c) {
+        boolean goldTriangle;
         double minValue = 1.61703;
         double maxValue = 1.61903;
         //compareOfSide - переменная, в которой будет результат отношения большей к меньшей стороне треугольника
-        double compareOfSide = 100000e-5;
+        double a1 = (double)maxSide(a, b, c) ;
+        double b1 = (double)minSide(a, b, c);
+        //double c1 = (double)c;
 
-        compareOfSide = maxSide(a, b, c) / minSide(a, b, c);//Double.valueOf(maxSide(a, b, c) / minSide(a, b, c));
-   //     double bc = b / c;
-    //    double ac = a / c;
-     //   if (isIsoscelesTriangle(a, b, c) == true) {
+        double compareOfSide;
+//
+         compareOfSide = a1/b1 ; // Double.valueOf(maxSide(a, b, c) / minSide(a, b, c));
+        //     double bc = b / c;
+        //    double ac = a / c;
+        if (isIsoscelesTriangle(a, b, c) == true) goldTriangle = true;
+
             if ((compareOfSide > minValue && compareOfSide < maxValue)) {
-                System.out.println("a = " + maxSide(a, b, c) + " Результат1 b = "+minSide(a, b, c) +" ++ " + compareOfSide +" ++ "+ minValue + " ++ "+ maxValue);
-                return true;
+                System.out.println("max = " + maxSide(a, b, c) + " min = " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
+                goldTriangle = true;
+            } else {
+                System.out.println("max.= " + maxSide(a, b, c) + " min.= " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
+                goldTriangle = false;
             }
 
-       // }
-        return false;
+        return goldTriangle;
     }
 }
