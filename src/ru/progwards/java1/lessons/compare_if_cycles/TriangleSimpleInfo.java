@@ -77,10 +77,28 @@ public class TriangleSimpleInfo<max> {
 
         System.out.println("Числа Фибоначчи от 1 до 15");
         for (int i = 0; i <= 15; i++) {
-            System.out.println("I= " + i + " Число Фибоначчи = "+ fiboNumber(i));
+            System.out.println("I= " + i + " Число Фибоначчи = " + fiboNumber(i));
+
+
+            int x = 1;
+            int y = 1;
+            int z = 2;
+            int count = i;
+            x = fiboNumber(count);
+            y = fiboNumber(count + 1);
+            z = fiboNumber(count + 2);
+            do if (fiboNumber(i) < 100) {
+
+                System.out.println(" xxx   xxx   xxx   xxx   xxx");
+                System.out.println("ЭТО ЗОЛОТОЙ треугольник" + "x = " + x + " y = " + y + " z = " + z);
+                System.out.println("xxx   xxx   xxx   xxx   xxx");
+            } else System.out.println("Это НЕ Золотой треугольник" + "x = " + x + " y = " + y + " z = " + z);
+            while (isGoldenTriangle(x, y, z) == true);
+
         }
 
-        System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(55,55,34));
+
+        System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(34,34,55));
 
     }
 

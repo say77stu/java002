@@ -4,6 +4,7 @@ import static ru.progwards.java1.lessons.compare_if_cycles.TriangleSimpleInfo.ma
 import static ru.progwards.java1.lessons.compare_if_cycles.TriangleSimpleInfo.minSide;
 
 public class CyclesGoldenFibo<number> {
+    //Фунция которая будет возвращать true, если число number содержит цифру digit.
     public static boolean containsDigit(int number, int digit) {
         boolean result = false;
         int digit1; // цифра числа number
@@ -57,25 +58,49 @@ public class CyclesGoldenFibo<number> {
         double minValue = 1.61703;
         double maxValue = 1.61903;
         //compareOfSide - переменная, в которой будет результат отношения большей к меньшей стороне треугольника
-        double a1 = (double)maxSide(a, b, c) ;
-        double b1 = (double)minSide(a, b, c);
+        double a1 = (double) maxSide(a, b, c);
+        double b1 = (double) minSide(a, b, c);
         //double c1 = (double)c;
 
         double compareOfSide;
 //
-         compareOfSide = a1/b1 ; // Double.valueOf(maxSide(a, b, c) / minSide(a, b, c));
+        compareOfSide = a1 / b1; // Double.valueOf(maxSide(a, b, c) / minSide(a, b, c));
         //     double bc = b / c;
         //    double ac = a / c;
-        if (isIsoscelesTriangle(a, b, c) == true) goldTriangle = true;
 
-            if ((compareOfSide > minValue && compareOfSide < maxValue)) {
-                System.out.println("max = " + maxSide(a, b, c) + " min = " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
-                goldTriangle = true;
-            } else {
-                System.out.println("max.= " + maxSide(a, b, c) + " min.= " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
-                goldTriangle = false;
+        // выявляем пару равных минимальных чисел
+        if ((a < minSide(a, b, c) == (b < minSide(a, b, c))) || ((b < minSide(a, b, c)) == (c < minSide(a, b, c)))) {
+            System.out.println("MAХ... = " + maxSide(a, b, c) + " MIN...= " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
+        }
+
+        if (isIsoscelesTriangle(a, b, c) == true && (compareOfSide > minValue && compareOfSide < maxValue)) {
+            System.out.println("max = " + maxSide(a, b, c) + " min = " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
+            goldTriangle = true;
+            return true;
+        } else {
+            System.out.println("max.= " + maxSide(a, b, c) + " min.= " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
+            goldTriangle = false;
+            return false;
+        }
+
+    }
+}
+
+
+
+/*
+        if (isIsoscelesTriangle(a, b, c) == true&&(compareOfSide > minValue && compareOfSide < maxValue)) {//goldTriangle = true;
+
+            //if ((compareOfSide > minValue && compareOfSide < maxValue)) {
+            System.out.println("max = " + maxSide(a, b, c) + " min = " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
+            goldTriangle = true;
+        } else {
+            System.out.println("max.= " + maxSide(a, b, c) + " min.= " + minSide(a, b, c) + " ++ " + compareOfSide + " ++ " + minValue + " ++ " + maxValue);
+            goldTriangle = false;
             }
 
         return goldTriangle;
     }
+
 }
+ */
