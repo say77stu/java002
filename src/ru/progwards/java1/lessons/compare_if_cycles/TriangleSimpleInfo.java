@@ -12,11 +12,11 @@ public class TriangleSimpleInfo<max> {
     public static int maxSide(int a, int b, int c) {
         int max = 1; //максимальная длина стороны
 
-        if (a > b && a > c) {
+        if (a >= b && a >=c) {
             max = a;
-        } else if (b > a && b > c) {
+        } else if (b >= a && b >= c) {
             max = b;
-        } else if (c > b && c > a) {
+        } else if (c >= b && c >= a) {
             max = c;
         }
             return max;
@@ -26,11 +26,11 @@ public class TriangleSimpleInfo<max> {
     public static int minSide(int a, int b, int c) {
         int min = 1; //минимальная длина стороны
 
-        if (a < b && a < c) {
+        if (a <= b && a <= c) {
             min = a;
-        } else if (b < a && b < c) {
+        } else if (b <= a && b <= c) {
             min = b;
-        } else if (c < b && c < a) {
+        } else if (c <= b && c <= a) {
             min = c;
         }
         return min;
@@ -80,7 +80,7 @@ public class TriangleSimpleInfo<max> {
             System.out.println("I= " + i + " Число Фибоначчи = "+ fiboNumber(i));
         }
 
-        System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(12,8,13));
+        System.out.println("Треугольник является ЗОЛОТЫМ ?  "+ isGoldenTriangle(55,55,34));
 
     }
 
